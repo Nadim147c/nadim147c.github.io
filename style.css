@@ -1,0 +1,122 @@
+:root {
+    --title-color: #404040;
+    --main-bg: #161d1b;
+    --icon-bg: #30e3cb99;
+
+    --links-card-bg: hsla(181, 80%, 20%, 0.2);
+    --links-card-shadow: hsla(181, 80%, 5%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--title-color);
+    background-color: var(--main-bg);
+}
+
+.link-container {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.links {
+    display: flex;
+    width: 50vw;
+    flex-wrap: wrap;
+    place-content: center;
+    place-items: center;
+
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: var(--links-card-bg);
+    box-shadow: 1rem 1rem 2rem var(--links-card-shadow);
+    transition: all 500ms ease;
+}
+
+@media screen and (max-width: 600px) {
+    .links {
+        width: 70vw;
+    }
+}
+
+.icon-container {
+    max-width: 60vw;
+}
+
+.icon {
+    height: 4.5rem;
+    padding: 0.5rem;
+    transition: all 500ms ease;
+}
+
+.icon:hover {
+    background-color: var(--icon-bg);
+    scale: 150%;
+    border-radius: 0.4rem;
+    opacity: 1 !important;
+}
+
+.background-title {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: -100;
+}
+
+.title {
+    pointer-events: none;
+    display: flex;
+    font-size: 15vw;
+    animation: text-in 1s ease forwards;
+    transform: translateY(-15%);
+}
+
+.title-container {
+    position: relative;
+    width: max-content;
+}
+
+.username {
+    position: absolute;
+    font-size: 5vw;
+    right: 0.5rem;
+    bottom: 4vw;
+    animation: fade-in 1s ease forwards;
+    text-shadow: 0.3rem 0.3rem var(--main-bg), -0.1rem -0.1rem var(--main-bg), 0.1rem -0.1rem var(--main-bg),
+        -0.1rem 0.1rem var(--main-bg), 0.1rem 0.1rem var(--main-bg), 0.5rem -1rem 2rem var(--main-bg);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes text-in {
+    from {
+        letter-spacing: 1rem;
+        opacity: 0;
+        scale: 110%;
+    }
+    to {
+        letter-spacing: normal;
+        opacity: 1;
+        scale: 100%;
+    }
+}
