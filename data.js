@@ -35,6 +35,18 @@ const getData = () => ({
             username: "Nadim147c",
             url: "https://myanimelist.net/profile/Nadim147c",
         },
+        {
+            service: "Spotify",
+            icon: "spotify.png",
+            username: "Nadim147c",
+            url: "https://open.spotify.com/user/gw9amblhq5k2adnm82uonkrap?si=6e3f1d24e02a4314",
+        },
+        {
+            service: "Pinterest",
+            icon: "pinterest.png",
+            username: "Nadim147c",
+            url: "https://www.pinterest.com/Nadim147c/",
+        },
     ],
 })
 
