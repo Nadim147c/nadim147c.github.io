@@ -47,6 +47,12 @@ const getData = () => ({
             username: "Nadim147c",
             url: "https://www.pinterest.com/Nadim147c/",
         },
+        {
+            service: "Reddit",
+            icon: "reddit.png",
+            username: "Nadim147",
+            url: "https://www.reddit.com/user/Nadim147",
+        },
     ],
 })
 
