@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+    <style>
+        @media (prefers-color-scheme: dark) {
+            .color {
+                fill: #d5d5d5;
+            }
+        }
+    </style>
+    <path class="color" d="M0,390.4h207.5V500H0V390.4z" />
+    <path class="color" d="M118.3 112 L0 112 L0 0 L56.1 0 Z" />
+    <path class="color" d="M207.5 272.2 L207.5 303.6 L0 303.6 L0 196.4 L165.3 196.4 L168.2 201.6 Z" />
+    <path class="color" d="M500 0 L500 432.4 L426.5 300.4 L388 231.2 L388 0 Z" />
+    <path class="color" d="M221.9 0 L93.9 0 L372 500 L500 500 Z" />
+</svg>
