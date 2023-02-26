@@ -7,7 +7,7 @@ const defaultTitle = title.innerText;
 const defaultUsername = username.innerText;
 const mobile = /Mobi/i.test(navigator.userAgent);
 let mouseHover = false;
-let lastMoveTime = formatTime();
+let lastMoveTime = getTime();
 linksData.forEach((link, index) => {
     const image = document.createElement("img");
     image.setAttribute("src", `icons/${link.icon}`);
@@ -58,24 +58,20 @@ document.onmousemove = (e) => {
     // Distance between mouse and trailer
     const distance = Math.sqrt((x - lx) ** 2 + (y - ly) ** 2);
     // Getting time of move movement
-    const currentTime = formatTime();
+    const currentTime = getTime();
     const time = currentTime - lastMoveTime;
     lastMoveTime = currentTime;
     // Converting velocity to scale
     const velocity = Math.min(distance / (time * 3), 3);
     const scale = parseFloat(velocity.toFixed(2));
-    const left = `${x}px`;
-    const top = `${y}px`;
-    // Getting middle point between mouse position and trailer position
-    const [xm, ym] = getMiddlePoint(x, y, lx, ly);
+    const left = x + "px";
+    const top = y + "px";
     const backgroundColor = mouseHover ? "#fff4" : "#fff";
     const keyframes = [
         {},
         {
             scale: mouseHover ? "3" : scale.toString(),
             backgroundColor,
-            top: ym,
-            left: xm,
         },
         {
             scale: mouseHover ? "3" : "0",
