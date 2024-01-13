@@ -1,10 +1,10 @@
 :root {
-    --title-color: #404040;
-    --main-bg: #161d1b;
-    --icon-bg: #30e3cb99;
+    --title-color: rgb(186, 194, 222);
+    --main-bg: rgb(30, 30, 46);
+    --icon-bg: rgba(49, 50, 68, 0.8);
 
-    --links-card-bg: hsla(181, 80%, 20%, 0.2);
-    --links-card-shadow: hsla(181, 80%, 5%);
+    --links-card-bg: rgba(49, 50, 68, 0.4);
+    --links-card-shadow: rgb(17, 17, 27);
 }
 
 * {
@@ -100,8 +100,13 @@ body {
     right: 0.5rem;
     bottom: 4vw;
     animation: fade-in 1s ease forwards;
-    text-shadow: 0.3rem 0.3rem var(--main-bg), -0.1rem -0.1rem var(--main-bg), 0.1rem -0.1rem var(--main-bg),
-        -0.1rem 0.1rem var(--main-bg), 0.1rem 0.1rem var(--main-bg), 0.5rem -1rem 2rem var(--main-bg);
+    text-shadow:
+        0.3rem 0.3rem var(--main-bg),
+        -0.1rem -0.1rem var(--main-bg),
+        0.1rem -0.1rem var(--main-bg),
+        -0.1rem 0.1rem var(--main-bg),
+        0.1rem 0.1rem var(--main-bg),
+        0.5rem -1rem 2rem var(--main-bg);
 }
 
 .trailer {
@@ -126,25 +131,15 @@ body {
 
 .trailer-link-hover .redirect-arrow {
     opacity: 0.8;
-    animation: sake 150ms ease infinite;
+    animation: zoom 500ms cubic-bezier(1, 0, 0, 1);
 }
 
-@keyframes sake {
+@keyframes zoom {
     from {
-        transform: rotate(0deg) scale(1);
-        opacity: 0.6 !important;
-    }
-    40% {
-        transform: rotate(15deg) scale(1.2);
-        opacity: 1 !important;
-    }
-    80% {
-        transform: rotate(-15deg) scale(1.2);
-        opacity: 1 !important;
+        scale: 0;
     }
     to {
-        transform: rotate(0deg) scale(1);
-        opacity: 0.8 !important;
+        scale: 1;
     }
 }
 
